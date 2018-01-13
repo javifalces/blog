@@ -5,10 +5,13 @@ import sys
 class Strategy:
     name = 'DefaultName'
 
-    def init(self, dictionaryParameters, trainSet=None):
+    def init(self, broker, dictionaryParameters, trainSet=None):
         print 'Must override it!'
         raise Exception('Must override init method!')
 
     def onBar(self, bar):
         print 'Must override it!'
         raise Exception('Must override init method!')
+
+    def sendOrder(self, Order):
+        pass
